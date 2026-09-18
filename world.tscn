@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://f70t1c00el6s"]
 
 [ext_resource type="PackedScene" uid="uid://crbdy32cwfjl" path="res://player.tscn" id="1_f3sb7"]
+[ext_resource type="Script" uid="uid://bbt3w8c8jmrfd" path="res://world.gd" id="1_gbfbk"]
 [ext_resource type="PackedScene" uid="uid://bbxua5a3b8tje" path="res://estrelas.tscn" id="1_pkg7o"]
 [ext_resource type="Script" uid="uid://bpbsjb5nb1paq" path="res://player.gd" id="2_fj7yv"]
 [ext_resource type="Texture2D" uid="uid://binx8edhnd0sx" path="res://Nave_0.png" id="3_dwbse"]
@@ -33,6 +34,7 @@ radius = 46.0
 height = 98.0
 
 [node name="World" type="Node2D" unique_id=2022453381]
+script = ExtResource("1_gbfbk")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1017524089]
 
@@ -52,7 +54,7 @@ metadata/_edit_group_ = true
 sprite_frames = SubResource("SpriteFrames_tlwt5")
 animation = &"propulsores2"
 autoplay = "propulsores2"
-frame_progress = 0.5294219
+frame_progress = 0.6482773
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player2" unique_id=502375290]
 shape = SubResource("CapsuleShape2D_wse8f")
