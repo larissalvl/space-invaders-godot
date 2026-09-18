@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://f70t1c00el6s"]
+
+[ext_resource type="PackedScene" uid="uid://crbdy32cwfjl" path="res://player.tscn" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://bbxua5a3b8tje" path="res://estrelas.tscn" id="1_pkg7o"]
+[ext_resource type="Script" uid="uid://bpbsjb5nb1paq" path="res://player.gd" id="2_fj7yv"]
+[ext_resource type="Texture2D" uid="uid://binx8edhnd0sx" path="res://Nave_0.png" id="3_dwbse"]
+[ext_resource type="Texture2D" uid="uid://dfnqqx11sj3yj" path="res://Nave_1.png" id="4_pkg7o"]
+[ext_resource type="Texture2D" uid="uid://xqmn81mbtbq0" path="res://Nave_2.png" id="5_gbfbk"]
+[ext_resource type="Texture2D" uid="uid://d1qgxbycdp8vn" path="res://Nave_3.png" id="6_ioo17"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tlwt5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_dwbse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pkg7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gbfbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ioo17")
+}],
+"loop": 1,
+"name": &"propulsores2",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wse8f"]
+radius = 46.0
+height = 98.0
+
+[node name="World" type="Node2D" unique_id=2022453381]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1017524089]
+
+[node name="Estrelas" parent="Parallax2D" unique_id=1308112312 instance=ExtResource("1_pkg7o")]
+position = Vector2(552, 453)
+
+[node name="Player1" parent="." unique_id=1296292051 instance=ExtResource("1_f3sb7")]
+position = Vector2(828.00006, 575)
+
+[node name="Player2" type="Area2D" parent="." unique_id=748731596]
+position = Vector2(286, 575)
+script = ExtResource("2_fj7yv")
+player_id = 2
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player2" unique_id=666761222]
+sprite_frames = SubResource("SpriteFrames_tlwt5")
+animation = &"propulsores2"
+autoplay = "propulsores2"
+frame_progress = 0.5294219
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2" unique_id=502375290]
+shape = SubResource("CapsuleShape2D_wse8f")
+
+[node name="Enemy" type="Area2D" parent="." unique_id=1067773186]
+position = Vector2(7, 13)
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy" unique_id=1994240945]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=1458319734]
+
+[node name="Marker2D" type="Marker2D" parent="Enemy" unique_id=157220742]

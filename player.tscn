@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://crbdy32cwfjl"]
+
+[ext_resource type="Script" uid="uid://bpbsjb5nb1paq" path="res://player.gd" id="1_hqtel"]
+[ext_resource type="Texture2D" uid="uid://6f1ruheabmbm" path="res://nave(fogo baixo).PNG" id="2_sweqy"]
+[ext_resource type="Texture2D" uid="uid://cgphfl0ylfqyl" path="res://nave(fogo medio).PNG" id="3_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://bshpt522fwd2" path="res://nave(fogo Alto).PNG" id="4_1jxqw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gxb6x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sweqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2hs0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1jxqw")
+}],
+"loop": 1,
+"name": &"fogoNave",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_es2mj"]
+radius = 940.001
+height = 2080.002
+
+[node name="Player1" type="Area2D" unique_id=1296292051]
+position = Vector2(330, 534)
+scale = Vector2(0.05, 0.05)
+script = ExtResource("1_hqtel")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1460239226]
+sprite_frames = SubResource("SpriteFrames_gxb6x")
+animation = &"fogoNave"
+autoplay = "fogoNave"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=383476692]
+shape = SubResource("CapsuleShape2D_es2mj")

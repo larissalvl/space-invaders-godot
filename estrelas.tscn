@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bbxua5a3b8tje"]
+
+[ext_resource type="Texture2D" uid="uid://c44yarf3obsc0" path="res://estrela1.PNG" id="1_07d8q"]
+[ext_resource type="Texture2D" uid="uid://cn3cnoctwq3ap" path="res://estrela2.PNG" id="2_ypj8u"]
+[ext_resource type="Texture2D" uid="uid://b88gm3dv87wg0" path="res://estrela3.PNG" id="3_k7pwm"]
+[ext_resource type="Texture2D" uid="uid://b43rbyiny8xf2" path="res://estrela4.PNG" id="4_6gcly"]
+[ext_resource type="Script" uid="uid://4sg5w21djqy7" path="res://estrelas.gd" id="5_tcg06"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_es2mj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_07d8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ypj8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_k7pwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6gcly")
+}],
+"loop": 1,
+"name": &"brilhoEstrela",
+"speed": 5.0
+}]
+
+[node name="Estrelas" type="AnimatedSprite2D" unique_id=1308112312]
+scale = Vector2(0.01, 0.01)
+sprite_frames = SubResource("SpriteFrames_es2mj")
+animation = &"brilhoEstrela"
+frame_progress = 0.07428036
+script = ExtResource("5_tcg06")
