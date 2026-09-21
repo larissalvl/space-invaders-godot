@@ -29,10 +29,10 @@ func _process(_delta):
 
 	if get_tree().get_nodes_in_group("jogadores").is_empty():
 		terminou = true
-		get_tree().change_scene_to_file("res://tela_game_over.tscn")
+		get_tree().change_scene_to_file("res://gameOver.tscn")
 	elif get_tree().get_nodes_in_group("inimigos").is_empty():
 		terminou = true
-		get_tree().change_scene_to_file("res://tela_vitoria.tscn")
+		get_tree().change_scene_to_file("res://telaVitoria.tscn")
 
 
 func spawnar_inimigos(tamanho_tela: Vector2) -> void:
