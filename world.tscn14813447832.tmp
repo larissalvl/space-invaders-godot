@@ -38,12 +38,12 @@ script = ExtResource("1_gbfbk")
 [node name="Estrelas" parent="Parallax2D" unique_id=1308112312 instance=ExtResource("1_pkg7o")]
 position = Vector2(552, 453)
 
-[node name="Player1" parent="." unique_id=1296292051 groups=["jogadores"] instance=ExtResource("1_f3sb7")]
+[node name="Player1" parent="." unique_id=1296292051 instance=ExtResource("1_f3sb7")]
 position = Vector2(828.00006, 575)
 player_id = 1
 intervalo_tiro = 0.3
 
-[node name="Player2" type="Area2D" parent="." unique_id=748731596 groups=["jogadores"]]
+[node name="Player2" type="Area2D" parent="." unique_id=748731596]
 position = Vector2(286, 575)
 scale = Vector2(0.05, 0.05)
 script = ExtResource("2_fj7yv")

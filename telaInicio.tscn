@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://b6c8vbfxtrp5i"]
+
+[ext_resource type="PackedScene" uid="uid://bbxua5a3b8tje" path="res://estrelas.tscn" id="1_5dhbd"]
+[ext_resource type="Script" uid="uid://bjaxjfc5kgwum" path="res://telainicio.gd" id="1_gwips"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_es2mj"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_2j2p5"]
+font_size = 23
+
+[node name="telaInicio" type="Control" unique_id=464367987]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gwips")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=2057315834]
+
+[node name="Estrelas" parent="Parallax2D" unique_id=1308112312 instance=ExtResource("1_5dhbd")]
+position = Vector2(552, 453)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=879697362]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 643.0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=916612424]
+layout_mode = 2
+text = "SPACE INVADERS"
+label_settings = SubResource("LabelSettings_es2mj")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=1206233257]
+layout_mode = 2
+text = "Jogador 1: A/D + W (tiro)   |   Jogador 2: ←/→ + ↑ (tiro)
+
+"
+label_settings = SubResource("LabelSettings_2j2p5")
+horizontal_alignment = 1
+
+[node name="botaoJogar" type="Button" parent="VBoxContainer" unique_id=1376296510]
+layout_mode = 2
+text = "Jogar"
+
+[node name="botaoSair" type="Button" parent="VBoxContainer" unique_id=449740294]
+layout_mode = 2
+text = "Sair"

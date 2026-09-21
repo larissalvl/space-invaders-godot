@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dbeu2jv1s3i1d"]
+
+[ext_resource type="Script" uid="uid://cmwsqav31o0qu" path="res://enemy.gd" id="1_4gyqm"]
+[ext_resource type="PackedScene" uid="uid://dw6l0is6e2kev" path="res://bala.tscn" id="2_iifgy"]
+[ext_resource type="Texture2D" uid="uid://bcijshoghgj4n" path="res://enemyProv.png" id="2_qi2p4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iifgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qi2p4")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_epg4t"]
+radius = 48.0
+height = 96.0
+
+[node name="Enemy" type="Area2D" unique_id=1874012711 groups=["inimigos"]]
+position = Vector2(1, -100)
+script = ExtResource("1_4gyqm")
+cenaBala = ExtResource("2_iifgy")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=408408443]
+position = Vector2(411, 130)
+rotation = -3.1415925
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_iifgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1641708077]
+position = Vector2(411, 130)
+rotation = -3.1415925
+scale = Vector2(0.6, 0.6)
+shape = SubResource("CapsuleShape2D_epg4t")
+
+[node name="PontoTiro" type="Marker2D" parent="." unique_id=346905321]
+position = Vector2(411.6, 153.4)
+rotation = -3.1415925
+scale = Vector2(0.6, 0.6)
+
+[node name="TiroTimer" type="Timer" parent="." unique_id=1547816812]
+autostart = true

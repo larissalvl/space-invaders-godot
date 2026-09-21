@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xqmn81mbtbq0"
-path="res://.godot/imported/Nave_2.png-39150c06ed74619919e7d1d281d1bee7.ctex"
+uid="uid://tnko3edyfqja"
+path="res://.godot/imported/nave roxa (fogo baixo).PNG-087ffdce74e3aaa248c7dd8e353f45a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Nave_2.png"
-dest_files=["res://.godot/imported/Nave_2.png-39150c06ed74619919e7d1d281d1bee7.ctex"]
+source_file="res://nave roxa (fogo baixo).PNG"
+dest_files=["res://.godot/imported/nave roxa (fogo baixo).PNG-087ffdce74e3aaa248c7dd8e353f45a6.ctex"]
 
 [params]
 

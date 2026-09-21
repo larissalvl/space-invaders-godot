@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://qlwj3vdi48pk"]
+
+[ext_resource type="Script" uid="uid://d1h8r1pjgjqfw" path="res://telaVitoria.gd" id="1_mtoak"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wxv34"]
+font_size = 50
+
+[node name="telaVitoria" type="Control" unique_id=21392029]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_mtoak")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=468806862]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 643.0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=930744849]
+layout_mode = 2
+text = "JOGADORES GANHARAM
+"
+label_settings = SubResource("LabelSettings_wxv34")
+horizontal_alignment = 1
+
+[node name="botaoJogarDnv" type="Button" parent="VBoxContainer" unique_id=1622390593]
+layout_mode = 2
+text = "Jogar novamente"
+
+[node name="botaoMenu" type="Button" parent="VBoxContainer" unique_id=97196445]
+layout_mode = 2
+text = "Menu"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfnqqx11sj3yj"
-path="res://.godot/imported/Nave_1.png-6e855f6144417abf148c89494fa25672.ctex"
+uid="uid://b4x1n2qicuq22"
+path="res://.godot/imported/tiroprov.png-c61565d4ec820ca5e6e2cf3e20c3761e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Nave_1.png"
-dest_files=["res://.godot/imported/Nave_1.png-6e855f6144417abf148c89494fa25672.ctex"]
+source_file="res://tiroprov.png"
+dest_files=["res://.godot/imported/tiroprov.png-c61565d4ec820ca5e6e2cf3e20c3761e.ctex"]
 
 [params]
 

@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dw6l0is6e2kev" path="res://bala.tscn" id="5_ioo17"]
 [ext_resource type="Texture2D" uid="uid://bwrce7nw2eoyt" path="res://nave roxa (fogo alto).PNG" id="6_ioo17"]
 [ext_resource type="Texture2D" uid="uid://55l3n7vndy5p" path="res://nave roxa (fogo medio).PNG" id="7_wse8f"]
+[ext_resource type="Script" uid="uid://cmwsqav31o0qu" path="res://enemy.gd" id="9_wse8f"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tlwt5"]
 animations = [{
@@ -30,6 +31,10 @@ animations = [{
 radius = 1000.0
 height = 2000.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_70uel"]
+radius = 53.0
+height = 106.0
+
 [node name="World" type="Node2D" unique_id=2022453381]
 script = ExtResource("1_gbfbk")
 
@@ -38,18 +43,15 @@ script = ExtResource("1_gbfbk")
 [node name="Estrelas" parent="Parallax2D" unique_id=1308112312 instance=ExtResource("1_pkg7o")]
 position = Vector2(552, 453)
 
-[node name="Player1" parent="." unique_id=1296292051 groups=["jogadores"] instance=ExtResource("1_f3sb7")]
+[node name="Player1" parent="." unique_id=1296292051 instance=ExtResource("1_f3sb7")]
 position = Vector2(828.00006, 575)
-player_id = 1
-intervalo_tiro = 0.3
 
-[node name="Player2" type="Area2D" parent="." unique_id=748731596 groups=["jogadores"]]
+[node name="Player2" type="Area2D" parent="." unique_id=748731596]
 position = Vector2(286, 575)
 scale = Vector2(0.05, 0.05)
 script = ExtResource("2_fj7yv")
 player_id = 2
 cena_bala = ExtResource("5_ioo17")
-metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player2" unique_id=666761222]
 sprite_frames = SubResource("SpriteFrames_tlwt5")
@@ -66,3 +68,15 @@ position = Vector2(859.99994, -719.99994)
 [node name="pontaE" type="Marker2D" parent="Player2" unique_id=1413462021]
 position = Vector2(-880, -720)
 scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Enemy" type="Area2D" parent="." unique_id=1067773186]
+position = Vector2(-5, 17)
+script = ExtResource("9_wse8f")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy" unique_id=1571220107]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=1458319734]
+shape = SubResource("CapsuleShape2D_70uel")
+
+[node name="Marker2D" type="Marker2D" parent="Enemy" unique_id=157220742]

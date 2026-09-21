@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://crbdy32cwfjl"]
 
 [ext_resource type="Script" uid="uid://bpbsjb5nb1paq" path="res://player.gd" id="1_hqtel"]
+[ext_resource type="PackedScene" uid="uid://dw6l0is6e2kev" path="res://bala.tscn" id="2_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://6f1ruheabmbm" path="res://nave(fogo baixo).PNG" id="2_sweqy"]
 [ext_resource type="Texture2D" uid="uid://cgphfl0ylfqyl" path="res://nave(fogo medio).PNG" id="3_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://bshpt522fwd2" path="res://nave(fogo Alto).PNG" id="4_1jxqw"]
@@ -27,9 +28,10 @@ radius = 940.001
 height = 2080.002
 
 [node name="Player1" type="Area2D" unique_id=1296292051]
-position = Vector2(330, 534)
+position = Vector2(335, 538)
 scale = Vector2(0.05, 0.05)
 script = ExtResource("1_hqtel")
+cena_bala = ExtResource("2_2hs0m")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1460239226]
@@ -39,3 +41,10 @@ autoplay = "fogoNave"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=383476692]
 shape = SubResource("CapsuleShape2D_es2mj")
+
+[node name="pontaD" type="Marker2D" parent="." unique_id=149506978]
+position = Vector2(859.99994, -719.99994)
+
+[node name="pontaE" type="Marker2D" parent="." unique_id=2004025295]
+position = Vector2(-860, -720)
+scale = Vector2(0.99999994, 0.99999994)
