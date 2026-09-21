@@ -1,10 +1,7 @@
 extends Area2D
 
-signal died(points)
-
 @export var velocidade := 50.0
 @export var distancia_descida := 100.0
-@export var pontos := 10
 @export var cenaBala: PackedScene
 
 @onready var tempoTiro: Timer = $TiroTimer
@@ -43,5 +40,4 @@ func shoot() -> void:
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("player_bullet"):
 		area.queue_free()
-		died.emit(pontos)
 		queue_free()
