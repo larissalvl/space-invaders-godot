@@ -24,20 +24,20 @@ func _physics_process(delta: float) -> void:
 			descendo = false
 
 func _on_shoot_timer_timeout() -> void:
-	shoot()
+	tiro()
 	tempoTiro.wait_time = randf_range(1.5, 4.0)
 
-func shoot() -> void:
+func tiro() -> void:
 	if cenaBala == null:
 		return
 	var bala = cenaBala.instantiate()
 	bala.textura = load("res://tiroprov.png")
 	bala.direcao = 1.0
 	bala.global_position = inicioTiro.global_position
-	bala.add_to_group("enemy_bullet")
+	bala.add_to_group("balaInimigo")
 	get_tree().current_scene.add_child(bala)
 
 func _on_area_entered(area: Area2D) -> void:
-	if area.is_in_group("player_bullet"):
+	if area.is_in_group("balaJogador"):
 		area.queue_free()
 		queue_free()

@@ -2,13 +2,77 @@
 
 [ext_resource type="Script" uid="uid://cmwsqav31o0qu" path="res://enemy.gd" id="1_4gyqm"]
 [ext_resource type="PackedScene" uid="uid://dw6l0is6e2kev" path="res://bala.tscn" id="2_iifgy"]
-[ext_resource type="Texture2D" uid="uid://bcijshoghgj4n" path="res://enemyProv.png" id="2_qi2p4"]
+[ext_resource type="Texture2D" uid="uid://b4ro267vblwy7" path="res://inimigo (luzes desligadas).PNG" id="3_dxifv"]
+[ext_resource type="Texture2D" uid="uid://cnyeh0rsvthu7" path="res://inimigo (luzes acesas).PNG" id="4_pwjut"]
+[ext_resource type="Texture2D" uid="uid://baw8xj3k1td8e" path="res://inimigo (luz VERMELHA).PNG" id="5_n0g06"]
+[ext_resource type="Texture2D" uid="uid://ci21k1v3qcp3w" path="res://inimigo (luz AMARELA).PNG" id="6_ar8e5"]
+[ext_resource type="Texture2D" uid="uid://br1ok6nipe05e" path="res://inimigo (luz VERDE).PNG" id="7_doop2"]
+[ext_resource type="Texture2D" uid="uid://vomvx4kf88n" path="res://inimigo (luz CIANO).PNG" id="8_5hcft"]
+[ext_resource type="Texture2D" uid="uid://b4u274817o2p3" path="res://inimigo (luz VIOLETA).PNG" id="9_nnovl"]
+[ext_resource type="Texture2D" uid="uid://cx4mu1u3lbja2" path="res://inimigo (luz ROSA).PNG" id="10_jmwgi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iifgy"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_qi2p4")
+"texture": ExtResource("3_dxifv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pwjut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_n0g06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ar8e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_doop2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5hcft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_nnovl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jmwgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pwjut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dxifv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pwjut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dxifv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pwjut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dxifv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jmwgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_nnovl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5hcft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_doop2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ar8e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_n0g06")
 }],
 "loop": 1,
 "name": &"default",
@@ -16,29 +80,30 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_epg4t"]
-radius = 48.0
-height = 96.0
+radius = 61.666626
+height = 123.33325
 
 [node name="Enemy" type="Area2D" unique_id=1874012711 groups=["inimigos"]]
-position = Vector2(1, -100)
+position = Vector2(444, 334)
 script = ExtResource("1_4gyqm")
 cenaBala = ExtResource("2_iifgy")
-metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=408408443]
-position = Vector2(411, 130)
-rotation = -3.1415925
-scale = Vector2(0.6, 0.6)
+position = Vector2(10.0000305, 1.5258789e-05)
+scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_iifgy")
+autoplay = "default"
+frame_progress = 0.44255877
+speed_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1641708077]
-position = Vector2(411, 130)
+position = Vector2(8, 4)
 rotation = -3.1415925
 scale = Vector2(0.6, 0.6)
 shape = SubResource("CapsuleShape2D_epg4t")
 
 [node name="PontoTiro" type="Marker2D" parent="." unique_id=346905321]
-position = Vector2(411.6, 153.4)
+position = Vector2(12, 33)
 rotation = -3.1415925
 scale = Vector2(0.6, 0.6)
 

@@ -11,7 +11,6 @@ var atirar: String
 @export var intervalo_tiro := 0.3
 var pode_atirar := true
 
-signal died
 
 func _ready():
 	if player_id == 1:
@@ -25,29 +24,28 @@ func _ready():
 	area_entered.connect(_on_area_entered)
 
 func _process(delta):
-	var direction = Input.get_axis(movEsquerda, movDireita)
-	position.x += direction * speed * delta
+	var direcao = Input.get_axis(movEsquerda, movDireita)
+	position.x += direcao * speed * delta
 	
 	var janelaJogo = get_viewport_rect().size.x
 	position.x = clamp(position.x, 0, janelaJogo)
 
 	if Input.is_action_pressed(atirar) and pode_atirar:
-		shoot()
+		tiro()
 		
-func shoot():
+func tiro():
 	pode_atirar = false
 	for ponta in [$pontaD, $pontaE]:
 		var bala = cena_bala.instantiate()
 		bala.global_position = ponta.global_position
 		get_tree().current_scene.add_child(bala)
-		bala.add_to_group("player_bullet")
+		bala.add_to_group("balaJogador")
 	await get_tree().create_timer(intervalo_tiro).timeout
 	pode_atirar = true
 
 func _on_area_entered(area: Area2D) -> void:
-	if area.is_in_group("enemy_bullet"):
+	if area.is_in_group("balaInimigo"):
 		area.queue_free()
-		died.emit()
 		queue_free()
 
 func levar_tiro():

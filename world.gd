@@ -7,7 +7,7 @@ var estrela_cena = preload("res://estrelas.tscn")
 @export var colunas := 7
 @export var espacamento_x := 150.0
 @export var espacamento_y := 60.0
-@export var margem_topo := -90.0
+@export var margem_topo := -10.0
 @export var atraso_entre_linhas := 10.0
 
 
@@ -21,7 +21,7 @@ func _ready():
 		var estrela = estrela_cena.instantiate()
 		estrela.position = Vector2(randf_range(0, tamanho_tela.x), randf_range(0, tamanho_tela.y))
 		add_child(estrela)
-	spawnar_inimigos(tamanho_tela/3.3)
+	spawnar_inimigos(tamanho_tela)
 	
 func _process(_delta):
 	if terminou:

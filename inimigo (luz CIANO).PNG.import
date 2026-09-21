@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcijshoghgj4n"
-path="res://.godot/imported/enemyProv.png-a565711c8f71f911429ffad6a9d9ffe2.ctex"
+uid="uid://vomvx4kf88n"
+path="res://.godot/imported/inimigo (luz CIANO).PNG-20034e627ef66101fb82a1be9c79c403.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemyProv.png"
-dest_files=["res://.godot/imported/enemyProv.png-a565711c8f71f911429ffad6a9d9ffe2.ctex"]
+source_file="res://inimigo (luz CIANO).PNG"
+dest_files=["res://.godot/imported/inimigo (luz CIANO).PNG-20034e627ef66101fb82a1be9c79c403.ctex"]
 
 [params]
 
